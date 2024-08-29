@@ -35,7 +35,7 @@ h1 {
     padding: 20px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
     width: 100%;
-    max-width: 900px;
+    max-width: 1400px;
 }
 
 @media(min-width: 768px) {
@@ -127,19 +127,19 @@ h1 {
     background-color: hsl(172, 67%, 55%);
 }
 
-.total-bill {
+.total-input {
   margin-bottom: 20px;
   text-align: left;
 }
 
-.bill-input {
+.input-box {
   display: block;
   font-size: 1.2rem;
   color: hsl(186, 14%, 43%);
   margin-bottom: 8px;
 }
 
-.bill-field {
+.input-field {
   display: flex;
   align-items: center;
   background-color: hsl(189, 41%, 97%);
@@ -148,13 +148,13 @@ h1 {
   font-size: 24px;
 }
 
-.dollar-icon {
+.input-icon {
   left: 10px;
   width: 20px;
   height: 30px;
 }
 
-.bill-text {
+.input-text {
   border: none;
   background: none;
   font-size: 24px;
@@ -162,3 +162,37 @@ h1 {
   color: hsl(183, 100%, 15%);
   width: 100%;
 }
+
+.tip-selector {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px; /* Adjust gap between squares */
+  justify-content: center; /* Center squares horizontally */
+}
+
+.tip-square {
+  width: 60px; /* Adjust width */
+  height: 60px; /* Adjust height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-family: 'Space Mono', monospace;
+  background-color: hsl(189, 41%, 97%); /* Light grayish cyan */
+  color: hsl(183, 100%, 15%); /* Very dark cyan */
+  border: 2px solid transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.tip-square:hover {
+  background-color: hsl(185, 41%, 84%); /* Slightly darker grayish cyan on hover */
+}
+
+.tip-square.selected {
+  background-color: hsl(172, 67%, 45%); /* Strong cyan for selected */
+  color: white;
+  border-color: hsl(172, 67%, 45%); /* Match the background color */
+}
+

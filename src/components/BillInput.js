@@ -10,17 +10,17 @@ const BillInput = ({ billAmount, setBillAmount }) => {
     }
   };
   return (
-    <div className="total-bill">
-      <label className="bill-text">
+    <div className="total-input">
+      <label className="input-text">
         Bill
       </label>
-      <div className='bill-field'>
-        <img src={dollar} alt="Dollar sign" className="dollar-icon" />
+      <div className='input-field'>
+        <img src={dollar} alt="Dollar sign" className="input-icon" />
         <input
           type="number"
           step="0.01"
-          id="bill-input"
-          className="bill-input"
+          id="people-input"
+          className="input-box"
           value={billAmount || ""}
           onChange={handleBillChange}
           placeholder="0.00"

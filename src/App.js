@@ -12,7 +12,6 @@ function App() {
     const [numberOfPeople, setNumberOfPeople] = useState(1); // Set the initial number of people to 1
 
     const handleTipChange = (percentage) => setTipPercentage(percentage); // Update the tip percentage
-    const handlePeopleChange = (e) => setNumberOfPeople(parseInt(e.target.value)); // Update the number of people
 
     const tipAmount = (bill * (tipPercentage / 100)) / numberOfPeople; // Calculate the tip amount per person
     const totalPerPerson = (bill / numberOfPeople) + tipAmount; // Calculate the total amount per person
@@ -24,7 +23,7 @@ function App() {
                 <div className="input-section">
                     <BillInput billAmount={bill} setBillAmount={setBill} /> 
                     <TipSelector selectedTip={tipPercentage} onChange={handleTipChange} />
-                    <PeopleInput value={numberOfPeople} onChange={handlePeopleChange} />
+                    <PeopleInput numberOfPeople={numberOfPeople} setNumberOfPeople={setNumberOfPeople} />
                 </div>
                 <div className="result-section">
                     <ResultsDisplay tipAmount={tipAmount} totalPerPerson={totalPerPerson} />
