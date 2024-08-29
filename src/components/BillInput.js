@@ -1,4 +1,5 @@
 import React from "react";
+import dollar from "../images/icon-dollar.svg";
 
 const BillInput = ({ billAmount, setBillAmount }) => {
   const handleBillChange = (e) => {
@@ -10,11 +11,11 @@ const BillInput = ({ billAmount, setBillAmount }) => {
   };
   return (
     <div className="total-bill">
-      <label className="bill-input">
+      <label className="bill-text">
         Bill
       </label>
       <div className='bill-field'>
-        <span className="dollar">$</span>
+        <img src={dollar} alt="Dollar sign" className="dollar-icon" />
         <input
           type="text"
           id="bill-input"

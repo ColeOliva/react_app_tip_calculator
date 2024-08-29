@@ -129,6 +129,7 @@ h1 {
 
 .total-bill {
   margin-bottom: 20px;
+  text-align: left;
 }
 
 .bill-input {
@@ -147,12 +148,13 @@ h1 {
   font-size: 24px;
 }
 
-.dollar {
-  color: hsl(186, 14%, 43%);
-  margin-right: 8px;
+.dollar-icon {
+  left: 10px;
+  width: 20px;
+  height: 30px;
 }
 
-.bill-input {
+.bill-text {
   border: none;
   background: none;
   font-size: 24px;
