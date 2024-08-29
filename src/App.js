@@ -11,7 +11,6 @@ function App() {
     const [tipPercentage, setTipPercentage] = useState(15); // Set the initial tip percentage to 15
     const [numberOfPeople, setNumberOfPeople] = useState(1); // Set the initial number of people to 1
 
-    const handleBillChange = (e) => setBill(parseFloat(e.target.value)); // Update the bill amount
     const handleTipChange = (percentage) => setTipPercentage(percentage); // Update the tip percentage
     const handlePeopleChange = (e) => setNumberOfPeople(parseInt(e.target.value)); // Update the number of people
 
@@ -23,7 +22,7 @@ function App() {
             <h1>SPLI<br/>TTER</h1>
             <div className="calculator-container">
                 <div className="input-section">
-                    <BillInput value={bill} onChange={handleBillChange} /> 
+                    <BillInput billAmount={bill} setBillAmount={setBill} /> 
                     <TipSelector selectedTip={tipPercentage} onChange={handleTipChange} />
                     <PeopleInput value={numberOfPeople} onChange={handlePeopleChange} />
                 </div>

@@ -2,8 +2,8 @@ import React from "react";
 import dollar from "../images/icon-dollar.svg";
 
 const BillInput = ({ billAmount, setBillAmount }) => {
-  const handleBillChange = (e) => {
-    const value = e.target.value;
+  const handleBillChange = (event) => {
+    const value = event.target.value;
     // Ensure that the input is a number and within reasonable range
     if (!isNaN(value) && value >= 0) {
       setBillAmount(parseFloat(value));
@@ -17,7 +17,8 @@ const BillInput = ({ billAmount, setBillAmount }) => {
       <div className='bill-field'>
         <img src={dollar} alt="Dollar sign" className="dollar-icon" />
         <input
-          type="text"
+          type="number"
+          step="0.01"
           id="bill-input"
           className="bill-input"
           value={billAmount || ""}
