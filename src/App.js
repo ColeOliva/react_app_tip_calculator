@@ -22,7 +22,7 @@ function App() {
             <div className="calculator-container">
                 <div className="input-section">
                     <BillInput billAmount={bill} setBillAmount={setBill} /> 
-                    <TipSelector selectedTip={tipPercentage} onChange={handleTipChange} />
+                    <TipSelector selectedTip={tipPercentage} setSelectedTip={setTipPercentage} onChange={handleTipChange} />
                     <PeopleInput numberOfPeople={numberOfPeople} setNumberOfPeople={setNumberOfPeople} />
                 </div>
                 <div className="result-section">
