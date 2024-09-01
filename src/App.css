@@ -125,27 +125,7 @@ h1 {
     cursor: not-allowed;
 }
 
-.result-section .tip, .result-section .total {
-    font-size: 2rem;
-    margin-bottom: 20px;
-    display: flex;
-    justify-content: space-between;
-}
 
-.result-section .reset-btn {
-    background-color: hsl(172, 67%, 45%);
-    color: white;
-    margin-top: 40px;
-    padding: 15px;
-    border-radius: 8px;
-    width: 100%;
-    font-size: 24px;
-    cursor: pointer;
-}
-
-.result-section .reset-btn:hover {
-    background-color: hsl(172, 67%, 55%);
-}
 
 .total-input {
   margin-bottom: 20px;
@@ -233,3 +213,41 @@ h1 {
   width: 100%;
 }
 
+.result-section .reset-btn {
+    background-color: hsl(172, 67%, 45%);
+    color: white;
+    margin-top: 40px;
+    padding: 15px;
+    border-radius: 8px;
+    width: 100%;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.result-section .reset-btn:hover {
+    background-color: hsl(172, 67%, 55%);
+}
+
+.result-dollar {
+  height: 24px;
+}
+
+.results .result h2 {
+  font-size: 1.6rem;
+  margin-bottom: 5px;
+  margin-top: 30px;
+  width: 100%; 
+}
+
+.results .result p {
+  font-size: 1rem;
+  color: hsl(186, 14%, 43%);
+  margin-bottom: 20px; /* Adds space below the paragraph */
+  text-align: left;
+}
+
+.results .result span {
+  color: hsl(172, 67%, 45%);
+  font-weight: 700;
+  font-size: 4rem;
+}
