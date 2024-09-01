@@ -1,5 +1,11 @@
-const ResetButton = () => {
-    return '';
+import React from 'react';
+
+const ResetButton = ({ onReset }) => {
+    return (
+        <button className="reset-button" onClick={onReset}>
+            RESET
+        </button>
+    );
 }
 
 export default ResetButton;
