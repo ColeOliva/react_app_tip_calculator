@@ -8,8 +8,8 @@ const TipSelector = ({ selectedTip, setSelectedTip, onChange }) => {
     if (percentage !== "other") {
       setCustomTip(""); // Reset custom tip if another option is selected
       onChange(percentage);
+    }
   };
-};
 
   const handleCustomTipChange = (event) => {
     // Ensure the input is a valid percentage
@@ -20,10 +20,11 @@ const TipSelector = ({ selectedTip, setSelectedTip, onChange }) => {
 
   const handleKeyPress = (event) => {
     if (event.key === "Enter" && customTip.trim() !== "") {
-        onChange(parseInt(customTip));
-        setSelectedTip(parseInt(customTip));
+      const customTipValue = parseInt(customTip);
+      setSelectedTip(customTipValue); // Set the custom tip as the selected tip
+      onChange(customTipValue);
     }
-};
+  };
 
   const tipPercentages = [5, 10, 15, 25, 50];
 
@@ -42,10 +43,12 @@ const TipSelector = ({ selectedTip, setSelectedTip, onChange }) => {
         </div>
       ))}
       <div
-        className={`tip-square ${selectedTip === "other" ? "selected" : ""}`}
+        className={`tip-square ${
+          selectedTip === "other" || selectedTip === parseInt(customTip) ? "selected" : ""
+        }`}
         onClick={() => handleTipChange("other")}
       >
-        {selectedTip === "other" ? (
+        {selectedTip === "other" || selectedTip === parseInt(customTip) ? (
           <input
             type="number"
             step="1"
@@ -55,9 +58,10 @@ const TipSelector = ({ selectedTip, setSelectedTip, onChange }) => {
             onKeyDown={handleKeyPress}
             placeholder="0"
             min="0"
+            autoFocus
           />
         ) : (
-          "Other"
+          selectedTip === parseInt(customTip) ? `${customTip}%` : "Other"
         )}
       </div>
     </div>
