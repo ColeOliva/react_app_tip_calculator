@@ -1,4 +1,4 @@
-This project is aboud building a tip calculator app. 
+This project is about building a tip calculator app. 
 
 <img src="./design/desktop-design-completed.jpg" width="500" />
 
