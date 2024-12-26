@@ -4,6 +4,4 @@ This project is about building a tip calculator app.
 
 Before starting the project, you need to install the dependencies by running `npm install`.
 
-Before starting the project, you need to install the dependencies by running `npm install`.
-
 To start the project, you can run `npm start`.
